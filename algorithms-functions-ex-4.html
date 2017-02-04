@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>algorithms-functions-ex-4</title>
+</head>
+<body>
+	<script>
+		// Write a function which takes an array of integers and returns an array with any duplicate integers removed.
+
+		function removeDups(arr) {
+			"use strict"; //restricts to local variables
+
+			var i;
+			var noDup = [];
+			var dups = [];
+
+			for(i = 0; i < arr.length; i++) { // loop input array while i > length of input array
+				// //check if it is not equal to the index of the array before it and after. if it isn't, that means its unique, push it in the uniques array
+				if(noDup.indexOf(arr[i]) == -1) {
+					noDup.push(arr[i]);
+					console.log("no duplicates", noDup);
+				} else {
+					dups.push(arr[i]);
+					console.log("duplicates", dups);
+				}
+			}
+			console.log("after loop: ", noDup);
+			return noDup;
+		}
+
+
+
+		// Testing
+		console.log(removeDups([1,1,2,3,1,2,3]) === [1,2,3]);
+		//console.log(removeDups([1,4,4,4,2,2,4,4,4,]) === [1,4,2]); 
+
+
+
+	</script>
+</body>
+</html> 

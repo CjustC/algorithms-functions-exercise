@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// function for comparing arrays
+		// Write a funciton which takes an arry of integers > 0 and returns the first integer which does not appear in that array.
+
+		function unique(arr) {
+			"use strict"; 
+
+			var i; 
+			
+			for (i = 0; i < arr.length; i++) { 
+				//console.log(arr[i]);
+				//console.log(i);
+				//console.log("before return", i);
+				//console.log(arr[i]);
+				if (i+1 !== arr[i]) { //if elements are not matching at the same index then true. this will always be false due to the fact arr2[i] will always be undefined, there is nothing in arr2
+					//console.log("before return", i);
+					//console.log(arr[i+1]);
+					return i + 1;	
+				}
+
+			}
+		}
+
+
+		// Testing
+		console.log(unique([1,2,5]) === 3); 
+		console.log(unique([1,2,3,4,5,7]) === 6);
+		console.log(unique([3,4,5]) === 1);
+
+	</script>
+</body>
+</html>

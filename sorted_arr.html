@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		/*
+		9. Write a function which takes two sorted lists and merges them into a new sorted list.
+
+[1,2,5,6,9], [3,4,5,10] -> [1,2,3,4,5,5,6,9,10]
+[], [] -> []
+[-1, 0, 1], [-2, 2] -> [-2, -1, 0, 1, 2]
+		*/
+
+		function merge(arr1, arr2) {
+			return arr1.concat(arr2).sort(function(a,b){
+				return a-b;
+			});
+		}
+
+		function merge(arr1, arr2) {
+			var i = 0;
+			var j = 0;
+			var newArr = [];
+			while(i + j < arr1.length + arr2.length) {
+				if (arr1[i] < arr2[j]){
+					newArr.push(arr1[i]);
+					i++;
+				} else {
+					newArr.push(arr2[j]);
+					j++;
+				}
+			}
+			return newArr;
+		}
+
+	</script>
+</body>
+</html>
